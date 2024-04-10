@@ -1,6 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript">
+        document.documentElement.style.cursor = 'none';
+    </script>
+    <script>
+        function getMouseCoords(e) {
+            var e = e || window.event;
+            document.getElementById('container').innerHTML = e.clientX + ', ' +
+                e.clientY + '<br>' + e.screenX + ', ' + e.screenY;
+        }
+
+
+        var followCursor = (function() {
+            var s = document.createElement('div');
+            s.style.position = 'absolute';
+            s.style.margin = '0';
+            s.style.height = '400px'
+            s.style.width = '400px'
+            s.style.backgroundImage = "url('stylus.png')"
+            s.style.backgroundSize = "cover"
+
+
+
+
+            return {
+                init: function() {
+                    document.body.appendChild(s);
+                },
+
+                run: function(e) {
+                    var e = e || window.event;
+                    s.style.left = (e.clientX - 25) + 'px';
+                    s.style.top = (e.clientY - 267) + 'px';
+                    getMouseCoords(e);
+                }
+            };
+        }());
+
+        window.onload = function() {
+            followCursor.init();
+            document.body.onmousemove = followCursor.run;
+        }</script>
+    <style> html {}
+    body {
+        height: 95vh;
+    }
+    </style>
     <meta charset="UTF-8">
     <title>Luca Tilyard</title>
 </head>
