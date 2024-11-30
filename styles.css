@@ -1,0 +1,251 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full page layout */
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.fullpage {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Section 1 */
+#section1 {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+}
+
+#section1 h1 {
+    font-size: 4rem;
+}
+
+/* Section 2 (Portfolio) */
+#section3 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* General section style - Targeting only #section2 */
+#section2 {
+    height: 100vh; /* Full height section */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background color */
+}
+
+/* Flexbox layout for the content within #section2 */
+#section2 .content {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    width: 100%;
+    max-width: 1200px; /* Max width to prevent it from stretching too wide */
+    gap: 40px; /* Space between photo and text */
+}
+
+/* Style for the photo within #section2 */
+#section2 .photo img {
+    width: 250px; /* Adjust the size of your image */
+    height: 250px;
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 50%; /* Makes the image round */
+    border: 4px solid #333; /* Optional: Adds a border around the image */
+}
+
+/* Style for the text content within #section2 */
+#section2 .text {
+    max-width: 700px; /* Restrict width for better readability */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+#section2 .text h1 {
+    font-size: 2.5rem; /* Adjust heading size */
+    margin-bottom: 15px;
+    color: #333; /* Dark color for the heading */
+}
+
+#section2 .text p {
+    font-size: 1.125rem; /* Adjust paragraph size */
+    line-height: 1.6;
+    color: #666; /* Lighter color for the body text */
+}
+
+/* Responsive design for #section2 */
+@media (max-width: 768px) {
+    /* Stack the photo and text vertically on small screens in #section2 */
+    #section2 .content {
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center the items horizontally */
+    }
+
+    #section2 .photo img {
+        width: 150px; /* Smaller image on mobile */
+        height: 150px;
+    }
+
+    #section2 .text {
+        max-width: 90%; /* Allow text to take up more space */
+        text-align: center; /* Center the text on smaller screens */
+    }
+}
+
+
+.projects {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-item {
+    width: 250px;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Section 3 (Contact) */
+#section4 {
+    background-color: #f4f4f4;
+    color: white;
+    text-align: center;
+}
+
+#section5 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    z-index: 1000;
+}
+
+nav .logo {
+    color: white;
+    font-size: 1.5rem;
+    float: left;
+    padding-left: 20px;
+}
+
+nav .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav .logo a:hover {
+    color: #00f;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #00f;
+}
+
+/* Smooth scroll and transition effects */
+html {
+    scroll-behavior: smooth;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.2);
+}
+
+
+/* Carousel container */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Carousel item */
+.carousel-item {
+    display: inline-block;
+    width: 100%;
+    animation: pan 20s linear infinite;
+}
+
+/* Keyframes for the pan animation */
+@keyframes pan {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+

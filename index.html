@@ -1,79 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="magicscroll/magicscroll.css"/>
-    <script src="magicscroll/magicscroll.js"></script>
-    <style> html {overflow: hidden;
-                    }
-    </style>
-    <script type="text/javascript">
-        //document.documentElement.style.cursor = 'none';
-    </script>
-    <script>
-        /* function getMouseCoords(e) {
-            var e = e || window.event;
-            document.getElementById('container').innerHTML = e.clientX + ', ' +
-                e.clientY + '<br>' + e.screenX + ', ' + e.screenY;
-        }
-
-
-        var followCursor = (function() {
-            var s = document.createElement('div');
-            s.style.position = 'absolute';
-            s.style.margin = '0';
-            s.style.height = '400px'
-            s.style.width = '400px'
-            s.style.backgroundImage = "url('stylus.png')"
-            s.style.backgroundSize = "cover"
-
-
-
-
-            return {
-                init: function() {
-                    document.body.appendChild(s);
-                },
-
-                run: function(e) {
-                    var e = e || window.event;
-                    s.style.left = (e.clientX - 25) + 'px';
-                    s.style.top = (e.clientY - 267) + 'px';
-                    getMouseCoords(e);
-                }
-            };
-        }());
-
-        window.onload = function() {
-            followCursor.init();
-            document.body.onmousemove = followCursor.run; }*/
-        </script>
-    <style> html {}
-    body {
-        height: 95vh;
-    }
-    </style>
     <meta charset="UTF-8">
-    <title>Luca Tilyard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div style="width: 1495px; height: 862px; position: relative; background: white">
-    <img style="width: 1884px; height: 1926px; left: -231px; top: -1041px; position: absolute" src="ds.png" />
-    <div style="width: 981px; height: 744px; left: 233px; top: 44px; position: absolute; background: white; border-radius: 20px"></div>
-    <div style="width: 819px; height: 232px; left: 314px; top: 90px; position: absolute; background: white; border-radius: 40px; border: 3px black solid"></div>
-    <div style="width: 541px; height: 99px; left: 460px; top: 114px; position: absolute; text-align: center; color: black; font-size: 48px; font-family: Jaldi; font-weight: 400; word-wrap: break-word">Luca Tilyard</div>
-    <div style="width: 485px; height: 107px; left: 481px; top: 187px; position: absolute; text-align: center; color: black; font-size: 32px; font-family: Jaldi; font-weight: 400; word-wrap: break-word">Mathematical Physics <br/>University of Edinburgh </div>
-    <div style="width: 942px; height: 60px; left: 253px; top: 728px; position: absolute; background: #D9D9D9"></div>
-    <div style="width: 59px; height: 59px; left: 233px; top: 728px; position: absolute; background: #ABECF5; border-top-left-radius: 20px; border-top-right-radius: 20px"></div>
-    <div style="width: 59px; height: 59px; left: 1214px; top: 788px; position: absolute; transform: rotate(-180deg); transform-origin: 0 0; background: #ABECF5; border-top-left-radius: 20px; border-top-right-radius: 20px"></div>
-    <div style="width: 767px; height: 0px; left: 340px; top: 758px; position: absolute; border: 3px #979797 dotted"></div>
-    <div style="width: 71px; height: 23px; left: 695px; top: 302px; position: absolute; background: white; border-radius: 10px"></div>
-    <div style="width: 76px; height: 59px; left: 352px; top: 728px; position: absolute; background: #ABECF5"></div>
-    <div style="width: 66px; height: 47px; left: 357px; top: 736px; position: absolute; mix-blend-mode: screen; background: #ABECF5"></div>
-    <div style="width: 981px; height: 267px; left: 233px; top: 411px; position: absolute;" class="MagicScroll" data-options="items: 4; step: 1;" >
-        <img src="placeholder.png">  <img src="placeholder.png">  <img src="placeholder.png">  <img src="placeholder.png">  <img src="placeholder.png">  <img src="placeholder.png">
+<!-- Navigation -->
+<nav>
+    <div class="logo"><a href="#section1">Luca Tilyard</a></div>
+    <ul class="nav-links">
+        <li><a href="#section2">About</a></li>
+        <li><a href="#section3">Portfolio</a></li>
+        <li><a href="#section4">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Sections -->
+<section id="section1" class="fullpage">
+    <div class="content">
+        <h1>Luca Tilyard</h1>
+        <p></p>
+        <img src="src/ADDBadge.png" alt="Project 1">
+
     </div>
-</div>
+</section>
+
+<!-- Add fade in for this ection dependant on scroll -->
+<section id="section2" class="fullpage">
+    <div class="content">
+        <div class="photo">
+            <img src="src/IMG_0803.PNG" alt="Luca Tilyard">
+        </div>
+        <div class="text">
+            <h1>Luca Tilyard</h1>
+            <p>Hi, I'm Luca Tilyard, a passionate computer programmer with expertise in JavaScript, C, and Python. I'm a MongoDB Certified Associate Developer, with a strong focus on building efficient, scalable applications. Currently, I’m studying Mathematical Physics at a leading UK university, where I apply my analytical skills to tackle complex problems in both software development and scientific computation. Whether it's writing code or solving intricate algorithms, I thrive on transforming abstract concepts into practical, innovative solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="section3" class="fullpage">
+    <div class="content">
+        <h1>Portfolio</h1>
+        <br>
+        <div class="projects">
+            <div class="project-item">
+                <img src="src/Experiance/python.png" alt="Project 1">
+                <h3>Mathematical Tools</h3>
+            </div>
+
+            <div class="project-item">
+                <img src="src/Experiance/C.png" alt="Project 2">
+                <h3>Raspberry Pi Pico</h3>
+            </div>
+
+            <div class="project-item">
+                <img src="src/Experiance/C.png" alt="Project 1">
+                <h3>Enigmatic</h3>
+            </div>
+
+            <div class="project-item">
+                <img src="src/Experiance/js.png" alt="Project 1">
+                <h3>Trading bot</h3>
+            </div>
+
+            <div class="project-item">
+                <img src="src/Experiance/solidity.png" alt="Project 1">
+                <h3>ERC20 Token</h3>
+            </div>
+            <!-- Add more project items -->
+        </div>
+    </div>
+</section>
+
+<section id="section4" class="fullpage">
+    <div class="content">
+        <div class="carousel">
+            <div class="carousel-item"><img src="src/Experiance/arch.png" alt="Experience 1"></div>
+            <div class="carousel-item"><img src="src/Experiance/js.png" alt="Experience 2"></div>
+            <div class="carousel-item"><img src="src/Experiance/qiskit.png" alt="Experience 3"></div>
+            <div class="carousel-item"><img src="src/Experiance/tf-old.png" alt="Experience 4"></div>
+            <div class="carousel-item"><img src="src/Experiance/ubuntu.png" alt="Experience 5"></div>
+            <div class="carousel-item"><img src="src/Experiance/python.png" alt="Experience 6"></div>
+            <div class="carousel-item"><img src="src/Experiance/raspi.png" alt="Experience 7"></div>
+            <div class="carousel-item"><img src="src/Experiance/NumPy.png" alt="Experience 8"></div>
+            <div class="carousel-item"><img src="src/Experiance/C.png" alt="Experience 9"></div>
+            <div class="carousel-item"><img src="src/Experiance/solidity.png" alt="Experience 10"></div>
+            <!-- Add more carousel items as needed -->
+            <!-- change jumping behavior at end of cacrocell, remove all backgrounds from photos -->
+        </div>
+    </div>
+</section>
+
+<section id="section5" class="fullpage">
+    <div class="content">
+        <h1>Contact Me</h1>
+        <div class="social-media">
+            <a href="https://x.com/LucaTilyard" target="_blank"><img src="src/X_logo.png" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/in/luca-tilyard-715311227/" target="_blank"><img src="src/LinkedIn.png" alt="LinkedIn"></a>
+            <a href="https://www.threads.net/@luca_till" target="_blank"><img src="src/threads.png" alt="Threads"></a>
+            <a href="https://github.com/LucaTilyard" target="_blank"><img src="src/GitHub.svg" alt="GitHub"></a>
+        </div>
+    </div>
+</section>
+
+<script src="scripts.js"></script>
 </body>
 </html>
-
 
