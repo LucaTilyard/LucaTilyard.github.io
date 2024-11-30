@@ -40,6 +40,8 @@ html, body {
 /* Section 2 (Portfolio) */
 #section3 {
     background-color: #333;
+    color: white;
+    text-align: center;
 }
 
 /* General section style - Targeting only #section2 */
@@ -126,11 +128,17 @@ html, body {
 }
 
 .project-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 /* Section 3 (Contact) */
 #section4 {
+    background-color: #f4f4f4;
+    color: white;
+    text-align: center;
+}
+
+#section5 {
     background-color: #333;
     color: white;
     text-align: center;
@@ -195,3 +203,49 @@ html {
     text-align: center;
     padding: 20px;
 }
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.2);
+}
+
+
+/* Carousel container */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Carousel item */
+.carousel-item {
+    display: inline-block;
+    width: 100%;
+    animation: pan 20s linear infinite;
+}
+
+/* Keyframes for the pan animation */
+@keyframes pan {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
